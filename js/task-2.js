@@ -2,11 +2,13 @@ function calcAverageCalories(days) {
   if (days.length === 0) {
     return 0;
   }
-  let callAverage = 0;
-  for (const day of days) {
-    callAverage += day.calories / days.length;
-  }
+  let sumCall = 0;
 
+  for (const day of days) {
+    sumCall += day.calories;
+  }
+  let callAverage;
+  callAverage = sumCall / days.length;
   return callAverage;
 }
 
